@@ -250,8 +250,8 @@ public class HomeController {
 
 	}
 	
-	@GetMapping("/furni")
-    public String showFurniPage() {
+	@GetMapping("/home")
+    public String showHomePage() {
         return "furni"; // Nombre de la vista que quieres retornar
     }
  @GetMapping("/shop")

@@ -138,8 +138,8 @@ $orders.validate({
 				required: true,
 				space: true,
 				numericOnly: true,
-				minlength: 10,
-				maxlength: 12
+				minlength: 9,
+				maxlength: 9
 
 			},
 			address: {
@@ -255,18 +255,18 @@ $resetPassword.validate({
 
 
 jQuery.validator.addMethod('lettersonly', function(value, element) {
-		return /^[^-\s][a-zA-Z_\s-]+$/.test(value);
-	});
-	
-		jQuery.validator.addMethod('space', function(value, element) {
-		return /^[^-\s]+$/.test(value);
-	});
+	return /^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s-]+$/.test(value);
+});
 
-	jQuery.validator.addMethod('all', function(value, element) {
-		return /^[^-\s][a-zA-Z0-9_,.\s-]+$/.test(value);
-	});
+jQuery.validator.addMethod('space', function (value, element) {
+	return /^[^-\s]+$/.test(value);
+});
+
+jQuery.validator.addMethod('all', function (value, element) {
+	return /^[^-\s][a-zA-Z0-9_,.\s-]+$/.test(value);
+});
 
 
-	jQuery.validator.addMethod('numericOnly', function(value, element) {
-		return /^[0-9]+$/.test(value);
-	});
+jQuery.validator.addMethod('numericOnly', function (value, element) {
+	return /^[0-9]+$/.test(value);
+});
