@@ -2,8 +2,8 @@
 <html lang="es" xmlns:th="http://www.thymeleaf.org"
 	th:replace="~{base::layout(~{::section})}">
 <head>
-<meta charset="ISO-8859-1">
-<title>Insertar título aquí</title>
+<meta charset="UTF-8">
+<title>Insertar tÃ­tulo aquÃ­</title>
 </head>
 <body>
 	<section>
@@ -29,18 +29,18 @@
 							<form action="/admin/saveProduct" method="post"
 								enctype="multipart/form-data">
 								<div class="mb-3">
-									<label>Ingrese Título</label> <input type="text" name="title"
+									<label>Ingrese TÃ­tulo</label> <input type="text" name="title"
 										class="form-control">
 								</div>
 
 								<div class="mb-3">
-									<label>Ingrese Descripción</label>
+									<label>Ingrese DescripciÃ³n</label>
 									<textarea rows="3" cols="" class="form-control"
 										name="description"></textarea>
 								</div>
 
 								<div class="mb-3">
-									<label>Categoría</label> <select class="form-control"
+									<label>CategorÃ­a</label> <select class="form-control"
 										name="category">
 										<option>--seleccionar--</option>
 										<option th:each="c:${categories}">[[${c.name}]]</option>
